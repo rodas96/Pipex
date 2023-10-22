@@ -12,10 +12,10 @@
 
 #include "./libft/libft.h"
 #include "stdio.h"
+#include "pipex.h"
 
-int main()
+
+int main(int ac, char **av, char **envp) 
 {
-    printf("%i\n", ft_atoi("23\n"));
-
-    return (0);
+    
 }

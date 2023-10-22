@@ -10,8 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef pipex.h
-# define pipex.h
+#include <stdio.h>
+#include <string.h>
+#include <sys/types.h>
+#include <dirent.h>
+#include <unistd.h>
+#include <stdlib.h>
+
+
+#ifndef PIPEX_H
+# define PIPEX_H
 
 typedef struct s_stack
 {
@@ -23,8 +31,5 @@ typedef struct s_stack
 	
 }t_stack;
 
-
-
-
-
+void validate_path(t_stack *stack);
 #endif

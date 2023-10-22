@@ -12,27 +12,17 @@
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+const char *ft_strcontains(const char *haystack, const char *needle)
 {
-	size_t	i;
-	size_t	j;
+    size_t needle_len = ft_strlen(needle);
+    size_t haystack_len = ft_strlen(haystack);
+    size_t i = 0;
 
-	j = 0;
-	i = 0;
-	if (little[0] == 0)
-		return ((char *)big);
-	while (big[i] != '\0')
+    while (i <= haystack_len - needle_len)
 	{
-		j = 0;
-		while (little[j] && big[i + j] == little[j] && i + j < len)
-		{
-			j++;
-		}
-		if (little[j] == 0)
-		{
-			return ((char *)&big[i]);
-		}
-		i++;
-	}
-	return (NULL);
+        if (ft_strncmp(&haystack[i], needle, needle_len) == 0)
+            return "contains";
+        i++;
+    }
+    return "!contains";
 }

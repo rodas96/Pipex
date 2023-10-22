@@ -1,9 +1,9 @@
 NAME = pipex
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Werror -Wextra
 RM = rm -f
 
-SRC = main.c
+SRC = utils.c main.c
 
 OBJS = $(SRC:.c=.o)
 
