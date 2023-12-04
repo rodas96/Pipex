@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pipex.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rmorais <rmorais@student.42.fr>            +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 16:45:21 by rmorais           #+#    #+#             */
-/*   Updated: 2023/05/20 16:56:32 by rmorais          ###   ########.fr       */
+/*   Updated: 2023/12/04 17:07:07 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 
 #ifndef PIPEX_H
 # define PIPEX_H
+#define array_len(arr) (sizeof(arr) / sizeof((arr)[0]))
 
 typedef struct s_stack
 {
@@ -31,5 +32,8 @@ typedef struct s_stack
 	
 }t_stack;
 
-void validate_path(t_stack *stack);
+void    free_arr_of_str(char **arr);
+char    **extract_paths(char **envp);
+
+
 #endif
